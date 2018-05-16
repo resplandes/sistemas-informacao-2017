@@ -1,3 +1,6 @@
+/*
+ * Classe que representa o contato
+ * */
 package modelo;
 
 public class Contato {
@@ -22,10 +25,14 @@ public class Contato {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	//Metodo que faz imprimir um objeto em string sem precisar converter
 	@Override
 	public String toString() {
 		return "Contato [contato=" + contato + ", telefone=" + telefone + ", email=" + email + "]";
 	}
+	
+	//Metodo reponsavel por procurar um contato por nome - (é criado automatico)
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -33,7 +40,8 @@ public class Contato {
 		result = prime * result + ((contato == null) ? 0 : contato.hashCode());
 		return result;
 	}
-	@Override
+	//Metodo reponsavel por procurar um contato por nome - (é criado automatico)
+	@Override//@Override significa sobreescrito
 	public boolean equals(Object obj) {
 		if (this == obj)
 			return true;

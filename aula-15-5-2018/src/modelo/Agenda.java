@@ -1,3 +1,6 @@
+/*
+ * Classe que representa a Agenda
+ * */
 package modelo;
 
 import java.util.ArrayList;
@@ -20,14 +23,17 @@ public class Agenda {
 		contatos.add(contato);
 	}
 
+	//Remove um objeto da listas
 	public void remove(String nomeDoContato) {
 		contatos.remove(get(nomeDoContato));
 	}
+	
+	//Altera um objeto passando o nome antigo e o nome novo
 	public void alterar(String nomeAntigo,String nomeNovo,String emailNovo,String foneNovo){
 		remove(nomeAntigo);
 		add(nomeNovo, emailNovo, foneNovo);
 	}
-
+	//Metodo que retorna um objeto por nome
 	public Contato get(String nomeDoContato) {
 		Contato contatoFiltro = new Contato();
 		contatoFiltro.setContato(nomeDoContato);
@@ -35,6 +41,7 @@ public class Agenda {
 		return contatos.get(posicaoDoContato);
 	}
 
+	//Metodo que imprimi a lista de objetos
 	public void imprimir() {
 		contatos.stream().forEach(c -> {
 			System.out.println(c);

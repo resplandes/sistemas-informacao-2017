@@ -1,3 +1,6 @@
+/*
+ * Classe  que representa um Testador de Agenda
+ * */
 package test;
 
 import modelo.Agenda;
